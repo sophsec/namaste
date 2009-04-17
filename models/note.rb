@@ -16,4 +16,8 @@ class Note
     self.title[0..40]
   end
 
+  def url
+    "/notes/#{self.id}"
+  end
+
 end

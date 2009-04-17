@@ -1,7 +1,11 @@
 require 'rubygems'
 require 'sinatra'
+
 require 'helpers/lib'
 require 'helpers/templates'
+
+require 'models/note'
+require 'models/comment'
 
 register_template :layout
 

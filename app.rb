@@ -9,29 +9,29 @@ get '/' do
   erb :index
 end
 
-get '/note/new' do
+get '/notes/new' do
 end
 
-post '/note/create' do
+post '/notes/create' do
   @note = Note.create(params[:note])
 end
 
-get '/note/:id' do
+get '/notes/:id' do
   @note = Note.first(:id => params[:id])
 end
 
-get '/note/' do
+get '/notes/' do
   @notes = Note.all
 end
 
-post '/comment/create' do
+post '/comments/create' do
   @comment = Comment.create(params[:comment])
 end
 
-get '/comment/:id' do
+get '/comments/:id' do
   @comment = Comment.first(:id => params[:id])
 end
 
-get '/comment/' do
+get '/comments/' do
   @comments = Comment.all
 end

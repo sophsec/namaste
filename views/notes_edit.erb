@@ -1,3 +1,5 @@
+<script type="text/javascript" src="/scripts/textile.js"></script>
+
 <form action="/notes/update" method="post">
   <input type="hidden" name="id" value="<%= @note.id %>" />
 
@@ -9,5 +11,5 @@
     <%= escape_html @note.summary %>
   </textarea>
 
-  <%= erb :syntax, :layout => false %>
+  <%= erb :textile, :layout => false %>
 </form>

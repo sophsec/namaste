@@ -1,3 +1,5 @@
+<script type="text/javascript" src="/scripts/textile.js"></script>
+
 <form action="/notes/create" method="post">
   <label>Title:</label>
   <input type="text" name="note[title]" />
@@ -5,5 +7,5 @@
   <p>Summary:</p>
   <textarea name="note[summary]"></textarea>
 
-  <%= erb :syntax, :layout => false %>
+  <%= erb :textile, :layout => false %>
 </form>

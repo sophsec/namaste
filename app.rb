@@ -19,6 +19,8 @@ end
 
 post '/notes/create' do
   @note = Note.create(params[:note])
+
+  redirect @note.url
 end
 
 post '/notes/update' do
@@ -27,7 +29,7 @@ post '/notes/update' do
   @note.attributes = params[:note]
   @note.save!
 
-  redirect "/notes/#{@note.id}"
+  redirect @note.url
 end
 
 get '/notes/:id/edit' do
@@ -45,5 +47,5 @@ end
 post '/comments/create' do
   @comment = Comment.create(params[:comment])
 
-  redirect "/notes/#{@comment.note_id}"
+  redirect @comment.note.url
 end

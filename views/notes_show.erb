@@ -11,4 +11,13 @@
       </div>
     <% end %>
   </div>
+
+  <form action="/comment/create" method="post">
+    <div id="submit_comment">
+      <input type="hidden" name="comment[note_id]" value="<%= @note.id %>" />
+
+      <p>Comment:</p>
+      <textarea name="comment[body]"></textarea>
+    </div>
+  </form>
 </div>

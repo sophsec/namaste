@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ruby ../app.rb -e production -s mongrel $*

@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'sinatra'
+require 'helpers/lib'
 require 'helpers/templates'
 
 register_template :layout

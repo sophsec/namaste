@@ -3,4 +3,12 @@
 
   <p>Summary:</p>
   <p><%= @note.summary %></p>
+
+  <div id="note_comments">
+    <% @note.comments.each do |comment| %>
+      <div class="comment">
+        <p><%= comment.body %></p>
+      </div>
+    <% end %>
+  </div>
 </div>

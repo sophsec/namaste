@@ -2,10 +2,12 @@
   <input type="hidden" name="id" value="<%= @note.id %>" />
 
   <label>Title:</label>
-  <input type="text" name="note[title]" value="<%= @note.title.dump %>"/>
+  <input type="text" name="note[title]" value="<%= escape_html @note.title.dump %>"/>
 
   <p>Summary:</p>
   <textarea name="note[summary]">
-    <%= @note.summary %>
+    <%= escape_html @note.summary %>
   </textarea>
+
+  <%= erb :syntax, :layout => false %>
 </form>

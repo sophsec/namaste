@@ -10,10 +10,11 @@ require 'models/comment'
 register_template :layout
 
 get '/' do
-  erb :index
+  erb :front
 end
 
 get '/notes/new' do
+  erb :notes_new
 end
 
 post '/notes/create' do

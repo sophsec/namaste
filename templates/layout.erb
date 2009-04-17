@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Namaste :: Share the Light</title>
+    <script type="text/javascript" src="/scripts/jquery.js"></script>
+    <script type="text/javascript" src="/scripts/feed.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/layout.css" />
+  </head>
+  <body>
+    <div id="page">
+      <div id="header">
+        <img id="banner" src="/images/banner.png" />
+      </div>
+
+      <ul id="menu">
+        <li>
+          <a href="/">Main</a>
+        </li>
+
+        <li>
+          <a href="/submit">Submit</a>
+        </li>
+      </ul>
+
+      <div id="feed">
+      </div>
+
+      <div id="content">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

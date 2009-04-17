@@ -47,7 +47,3 @@ post '/comments/create' do
 
   redirect "/notes/#{@comment.note_id}"
 end
-
-get '/comments/' do
-  @comments = Comment.all
-end

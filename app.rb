@@ -44,10 +44,6 @@ post '/comments/create' do
   @comment = Comment.create(params[:comment])
 end
 
-get '/comments/:id' do
-  @comment = Comment.first(:id => params[:id])
-end
-
 get '/comments/' do
   @comments = Comment.all
 end

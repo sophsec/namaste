@@ -21,6 +21,17 @@ post '/notes/create' do
   @note = Note.create(params[:note])
 end
 
+get '/notes/:id/edit' do
+  @note = Note.first(:id => params[:id])
+end
+
+post '/notes/:id/update' do
+  @note = Note.first(:id => params[:id])
+
+  @note.attributes = params[:note]
+  @note.save!
+end
+
 get '/notes/:id' do
   @note = Note.first(:id => params[:id])
 end

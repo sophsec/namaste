@@ -8,7 +8,7 @@ class Note
 
   property :title, String
 
-  property :body, Text
+  property :summary, Text
 
   has n, :comments
 

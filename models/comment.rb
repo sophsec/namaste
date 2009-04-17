@@ -1,6 +1,6 @@
 require 'namaste/model'
 
-require 'redcloth'
+require 'bluecloth'
 
 class Comment
 
@@ -15,7 +15,7 @@ class Comment
   belongs_to :note
 
   def html_body
-    RedCloth.new(self.body).to_html
+    BlueCloth.new(self.body).to_html
   end
 
 end

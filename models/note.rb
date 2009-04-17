@@ -1,6 +1,6 @@
 require 'namaste/model'
 
-require 'redcloth'
+require 'bluecloth'
 
 class Note
 
@@ -19,7 +19,7 @@ class Note
   end
 
   def html_summary
-    RedCloth.new(self.summary).to_html
+    BlueCloth.new(self.summary).to_html
   end
 
   def url

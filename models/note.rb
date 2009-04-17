@@ -6,6 +6,8 @@ class Note
 
   property :id, Serial
 
+  property :title, String
+
   property :body, Text
 
   has n, :comments

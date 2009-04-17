@@ -1,9 +1,11 @@
 <form action="/notes/update" method="post">
+  <input type="hidden" name="id" value="<%= @note.id %>" />
+
   <label>Title:</label>
   <input type="text" name="note[title]" value="<%= @note.title.dump %>"/>
 
-  <p>Content:</p>
-  <textarea name="note[body]">
+  <p>Summary:</p>
+  <textarea name="note[summary]">
     <%= @note.summary %>
   </textarea>
 </form>

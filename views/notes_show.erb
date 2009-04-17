@@ -2,12 +2,14 @@
   <p>Title: <%= @note.title %></p>
 
   <p>Summary:</p>
-  <p><%= @note.summary %></p>
+  <div id="note_summary">
+    <%= @note.html_summary %>
+  </div>
 
   <div id="note_comments">
     <% @note.comments.each do |comment| %>
       <div class="comment">
-        <p><%= comment.body %></p>
+        <%= comment.html_body %>
       </div>
     <% end %>
   </div>

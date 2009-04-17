@@ -34,14 +34,20 @@ end
 
 get '/notes/:id/edit' do
   @note = Note.first(:id => params[:id])
+
+  erb :notes_edit
 end
 
 get '/notes/:id' do
   @note = Note.first(:id => params[:id])
+
+  erb :notes_show
 end
 
 get '/notes/' do
   @notes = Note.all
+
+  erb :notes
 end
 
 post '/comments/create' do

@@ -8,9 +8,7 @@
   <input type="text" name="note[title]" value="<%= escape_html @note.title.dump %>"/>
 
   <p>Summary:</p>
-  <textarea name="note[summary]">
-    <%= escape_html @note.summary %>
-  </textarea>
+  <textarea name="note[summary]"><%= escape_html @note.summary %></textarea>
 
   <input type="submit" name="submit" value="Submit" />
   <%= erb :textile, :layout => false %>

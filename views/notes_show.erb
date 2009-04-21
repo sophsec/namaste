@@ -1,4 +1,4 @@
-<script type="text/javascript" src="/scripts/notes.js"></script>
+<script type="text/javascript" src="/scripts/notes_show.js"></script>
 
 <div id="note">
   <h2><%= escape_html @note.title %></h2>
@@ -18,6 +18,8 @@
 
       <p>Comment:</p>
       <textarea name="comment[body]"></textarea>
+
+      <input type="submit" name="submit" value="Submit" />
     </div>
   </form>
 

@@ -5,13 +5,9 @@
     <%= @note.html_summary %>
   </div>
 
-  <div id="note_comments">
-    <% @note.comments.each do |comment| %>
-      <div class="comment">
-        <%= comment.html_body %>
-      </div>
-    <% end %>
-  </div>
+  <p>
+    <a href="/notes/<%= @note.id %>/edit">Edit</a>
+  </p>
 
   <form action="/comment/create" method="post">
     <div id="submit_comment">
@@ -21,4 +17,12 @@
       <textarea name="comment[body]"></textarea>
     </div>
   </form>
+
+  <div id="note_comments">
+    <% @note.comments.each do |comment| %>
+      <div class="comment">
+        <%= comment.html_body %>
+      </div>
+    <% end %>
+  </div>
 </div>

@@ -4,8 +4,11 @@ require 'sinatra'
 require 'helpers/lib'
 require 'helpers/templates'
 
-require 'models/note'
-require 'models/comment'
+require 'namaste'
+
+include Namaste
+
+Database.setup
 
 register_template :layout
 

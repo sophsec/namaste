@@ -4,22 +4,47 @@ body {
 	background-color: #eeeeee;
 }
 
+img {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
 #page {
 }
 
 #header {
+	text-align: center;
 }
 
 #banner {
 }
 
 #menu {
+  margin: 0;
+	padding: 1em;
+	color: #555555;
+	background-color: white;
+}
+
+#menu > span.item {
+	padding: 0 1em 0 1em;
+}
+
+#menu > span.item > a {
+	color: #555555;
+	text-decoration: none;
+}
+
+#menu > span.item > a:hover {
+	color: black;
 }
 
 #feed {
-	height: 5em;
 	padding: 1em 0 1em 0;
 }
 
 #content {
+	color: black;
+	background-color: white;
 }

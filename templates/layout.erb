@@ -12,19 +12,19 @@
       </div>
 
       <ul id="menu">
-        <li>
+        <span class="item">
           <a href="/">Main</a>
-        </li>
+        </span>
 
-        <li>
-          <a href="/submit">Submit</a>
-        </li>
+        <span class="item">
+          <a href="/notes/new">Submit</a>
+        </span>
       </ul>
 
-      <div id="feed">
-      </div>
-
       <div id="content">
+        <div id="feed">
+        </div>
+
         <%= yield %>
       </div>
     </div>

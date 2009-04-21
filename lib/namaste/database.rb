@@ -36,7 +36,7 @@ module Namaste
     #
     def Database.setup(configuration=DEFAULT_CONFIG,&block)
       # setup the database repository
-      DataMapper.setup(configuration)
+      DataMapper.setup(:default, configuration)
 
       Database.update!(&block)
       return nil

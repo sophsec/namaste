@@ -5,10 +5,13 @@ require 'helpers/lib'
 require 'helpers/templates'
 
 require 'namaste'
+require 'scandb'
 
 include Namaste
+include ScanDB
 
-Database.setup
+Namaste::Database.setup
+ScanDB::Database.setup
 
 register_template :layout
 
@@ -53,4 +56,19 @@ post '/comments/create' do
   @comment = Comment.create(params[:comment])
 
   redirect @comment.note.url
+end
+
+get '/hosts/' do
+  @hosts = Host.all
+
+  erb :hosts
+end
+
+get '/hosts/:id' do
+  @host = Host.first(:id => params[:id])
+
+  erb :hosts_show
+end
+
+post '/hosts/upload' do
 end

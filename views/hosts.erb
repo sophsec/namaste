@@ -1,0 +1,6 @@
+<h2>Hosts:</h2>
+<% @hosts.each do |host| %>
+<p>
+  <a href="/hosts/<%= host.id %>"><%= escape_html host.ip %></a>
+</p>
+<% end %>

@@ -1,0 +1,29 @@
+<h2><%= escape_html @host.ip %></h2>
+
+<h3>Host names:</h3>
+<ul>
+<% @host.names.each do |host_name| %>
+  <li><%= escape_html host_name.name %></li>
+<% end %>
+</ul>
+
+<h3>Scanned Ports:</h3>
+<table>
+  <thead>
+    <th>Protocol</th>
+    <th>Status</th>
+    <th>Port</th>
+    <th>Service</th>
+  </thead>
+
+  <tbody>
+  <% @host.scanned_ports.each do |scanned_port| %>
+    <tr>
+      <td><%= scanned_port.port.protocol %></td>
+      <td><%= scanned_port.status %></td>
+      <td><%= scanned_port.port.number %></td>
+      <td><%= escape_html scanned_port.service.name %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

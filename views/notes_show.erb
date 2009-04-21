@@ -1,7 +1,6 @@
 <div id="note">
-  <p>Title: <%= @note.title %></p>
+  <h2><%= escape_html @note.title %></h2>
 
-  <p>Summary:</p>
   <div id="note_summary">
     <%= @note.html_summary %>
   </div>

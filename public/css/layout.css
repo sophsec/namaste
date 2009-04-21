@@ -40,11 +40,30 @@ img {
 	color: black;
 }
 
+#content {
+	padding: 1em;
+	color: black;
+	background-color: white;
+}
+
 #feed {
 	padding: 1em 0 1em 0;
 }
 
-#content {
-	color: black;
-	background-color: white;
+#content a {
+  color: #555555;
+  text-decoration: none;
+}
+
+#content a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+#content pre {
+  margin: 0.5em;
+  padding: 0.5em;
+  color: black;
+  background-color: #dddddd;
+  overflow: auto;
 }

@@ -1,4 +1,5 @@
 require 'namaste/config'
+require 'namaste/model'
 
 require 'dm-core'
 
@@ -7,14 +8,14 @@ module Namaste
     # Default configuration of the database
     DEFAULT_CONFIG = {
       :adapter => :sqlite3,
-      :database => ':memory'
+      :database => ':memory:'
     }
 
     #
     # Returns +true+ if the Database is setup, returns +false+ otherwise.
     #
     def Database.setup?
-      repository = DataMapper.repository
+      repository = DataMapper.repository(Model::REPOSITORY_NAME)
 
       return repository.class.adapters.has_key?(repository.name)
     end
@@ -25,7 +26,7 @@ module Namaste
     def Database.update!(&block)
       block.call if block
 
-      DataMapper.auto_upgrade! if Database.setup?
+      DataMapper.auto_upgrade!(Model::REPOSITORY_NAME) if Database.setup?
       return nil
     end
 
@@ -36,7 +37,7 @@ module Namaste
     #
     def Database.setup(configuration=DEFAULT_CONFIG,&block)
       # setup the database repository
-      DataMapper.setup(:default, configuration)
+      DataMapper.setup(Model::REPOSITORY_NAME, configuration)
 
       Database.update!(&block)
       return nil

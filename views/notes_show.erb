@@ -1,3 +1,5 @@
+<script type="text/javascript" src="/scripts/notes.js"></script>
+
 <div id="note">
   <h2><%= escape_html @note.title %></h2>
 
@@ -6,10 +8,11 @@
   </div>
 
   <p>
-    <a href="/notes/<%= @note.id %>/edit">Edit</a>
+    <a href="/notes/<%= @note.id %>/edit">Edit</a> |
+    <a class="post_comment">Post Comment</a>
   </p>
 
-  <form action="/comment/create" method="post">
+  <form id="comment_form" action="/comment/create" method="post">
     <div id="submit_comment">
       <input type="hidden" name="comment[note_id]" value="<%= @note.id %>" />
 

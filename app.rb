@@ -64,13 +64,17 @@ get '/hosts/' do
   erb :hosts
 end
 
-post '/hosts/upload' do
+get '/hosts/upload' do
+  erb :hosts_upload
+end
+
+post '/hosts/submit' do
   Nmap.import_xml(params[:file].path)
 
   redirect '/hosts/'
 end
 
-endget '/hosts/:id' do
+get '/hosts/:id' do
   @host = Host.first(:id => params[:id])
 
   erb :hosts_show

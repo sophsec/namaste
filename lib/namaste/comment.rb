@@ -19,5 +19,9 @@ module Namaste
       BlueCloth.new(self.body).to_html
     end
 
+    def url
+      "/comments/#{self.id}"
+    end
+
   end
 end

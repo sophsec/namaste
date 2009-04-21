@@ -2,7 +2,7 @@
   <% @notes.each do |note| %>
     <p>
       <a href="/notes/<%= note.id %>" target="_blank">
-        <%= note.short_title %>
+        <%= escape_html note.short_title %>
       </a>
     </p>
   <% end %>

@@ -13,7 +13,9 @@ Database.setup
 register_template :layout
 
 get '/' do
-  erb :front
+  @notes = Note.all
+
+  erb :notes
 end
 
 get '/notes/new' do
@@ -45,12 +47,6 @@ get '/notes/:id' do
   @note = Note.first(:id => params[:id])
 
   erb :notes_show
-end
-
-get '/notes/' do
-  @notes = Note.all
-
-  erb :notes
 end
 
 post '/comments/create' do

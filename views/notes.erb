@@ -1,7 +1,7 @@
 <div id="notes">
   <% @notes.each do |note| %>
     <p>
-      <a href="/notes/<%= note.id %>" target="_blank">
+      <a href="<%= note.url %>" target="_blank">
         <%= escape_html note.short_title %>
       </a>
     </p>

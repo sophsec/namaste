@@ -6,4 +6,5 @@ $(document).ready(function() {
   });
 
   $("#textile_syntax").hide();
+  $("#notes_form/input:first").focus();
 });
